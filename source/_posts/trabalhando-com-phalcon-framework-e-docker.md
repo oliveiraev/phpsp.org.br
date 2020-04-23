@@ -7,7 +7,8 @@ authorEmail: ress.rogerio@gmail.com
 
 [Read in english](https://medium.com/@rogsilva/working-with-phalcon-framework-and-docker-fef3fe5b85c8)
 
-Olá pessoal, este é um simples tutorial de como rodar aplicações Phalcon usando Docker em ambiente de desenvolvimento.
+Olá pessoal, este é um simples tutorial de como rodar aplicações Phalcon usando
+Docker em ambiente de desenvolvimento.
 
 Verifique se você possui os requisitos abaixo instalados no seu computador.
 
@@ -24,11 +25,12 @@ mkdir phalcon_sample && cd phalcon_sample
 
 ## Passo 2: Configurando o Docker
 
-O **Dockerfile** é necessário para que o Docker crie um contêiner com base em uma imagem PHP e faça a instalação do Phalcon.
-Crie um arquivo chamado `docker-compose.yml` com o código fonte abaixo.
+O **Dockerfile** é necessário para que o Docker crie um contêiner com base em
+uma imagem PHP e faça a instalação do Phalcon. Crie um arquivo chamado
+`docker-compose.yml` com o código fonte abaixo.
 
 ```yaml
-version: '3'
+version: "3"
 
 services:
   app:
@@ -38,9 +40,9 @@ services:
     volumes:
       - ./:/var/www/html
     ports:
-      - '8080:80'
+      - "8080:80"
     expose:
-      - '8080'
+      - "8080"
     depends_on:
       - mysql
     links:
@@ -55,7 +57,7 @@ services:
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     ports:
-      - '3306:3306'
+      - "3306:3306"
 ```
 
 Crie um arquivo chamado `Dockerfile` com o código fonte abaixo.
@@ -100,7 +102,10 @@ docker-compose up -d
 
 ## Passo 4: Criando a aplicação Phalcon
 
-Nós usaremos o [Phalcon developer tools](https://github.com/phalcon/phalcon-devtools) para criar um projeto padrão do Phalcon. Rode o comando abaixo para inicializar o composer.
+Nós usaremos o
+[Phalcon developer tools](https://github.com/phalcon/phalcon-devtools) para
+criar um projeto padrão do Phalcon. Rode o comando abaixo para inicializar o
+composer.
 
 ```
 docker-compose exec app composer init
@@ -110,7 +115,8 @@ Você pode inicializar o composer usando seus dados personalizados.
 
 ![Inicialização do composer](https://miro.medium.com/max/3396/1*qQmj9TZH0Nx2Ke1s_LUeqA.png)
 
-Após a criação do `composer.json`, você precisa instalar o Phalcon developer tools e criar a aplicação.
+Após a criação do `composer.json`, você precisa instalar o Phalcon developer
+tools e criar a aplicação.
 
 ```
 docker-compose exec app composer require --dev phalcon/devtools
@@ -122,7 +128,8 @@ docker-compose exec app ./vendor/bin/phalcon project application simple
 
 ## Passo 5: Acessando a aplicação
 
-Se você concluiu os passos anteriores sem erros, você pode acessar o projeto pelo seu browser, o projeto está rodando em http://localhost:8080
+Se você concluiu os passos anteriores sem erros, você pode acessar o projeto
+pelo seu browser, o projeto está rodando em http://localhost:8080
 
 ![Aplicação rodando](https://miro.medium.com/max/4316/1*PHGrg23dRw7Etan9oP1LLw.png)
 
