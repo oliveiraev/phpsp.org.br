@@ -15,7 +15,7 @@ class GenerateRssFeed implements JigsawHandlerInterface
         $builder = $jigsaw->app->make(RSSFeedBuilder::class);
         $dom = $builder->build($jigsaw->getCollection('posts'));
         $dom->formatOutput = true;
-        
+
         file_put_contents($jigsaw->getDestinationPath() . DIRECTORY_SEPARATOR . '/feed.xml', $dom->saveXML());
     }
 }

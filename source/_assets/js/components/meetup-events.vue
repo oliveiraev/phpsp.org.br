@@ -6,7 +6,7 @@
             </div>
             <div class="message-body">
                 <p>
-                    <strong>Onde:</strong> 
+                    <strong>Onde:</strong>
 		    <span v-if="item.venue">{{ item.venue.name }}</span>
 		    <span v-else>Online (Clique <a href="https://www.youtube.com/user/phpsp1" target="_blank">aqui</a>)</span>.
 		    <br>

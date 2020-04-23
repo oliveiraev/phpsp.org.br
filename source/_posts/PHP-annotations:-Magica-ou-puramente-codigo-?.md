@@ -28,7 +28,7 @@ Uma definição que trago para computação é:
 
 Annotations também são conhecidas como `Decorators` e `Attributes` por outras
 linguagens como Python, Javascript, C# e Rust, na presente data, o PHP chama
-isso de `Annotations`.  
+isso de `Annotations`.
 Dessa forma, diferente do que muitos pensam, podemos afirmar que annotations não
 são comentários e sim **metadados**. Leia até o final para entender por que
 Annotations são **metadados** e não comentários como muitos pensam.
@@ -189,7 +189,7 @@ coisa mais importante que você precisa saber quando falamos sobre annotations,
 isso é usado para a leitura de metadados em `docblocks`:
 
 ```php
-/** 
+/**�
 * A test class
 *
 * @param  foo bar
@@ -223,7 +223,7 @@ propriedades e classes por exemplo. Vejamos um simples exemplo da aplicação de
 expressões regulares para extrair metadata com PHP:
 
 ```php
-/** 
+/**�
 * A test class
 *
 * @param  foo bar

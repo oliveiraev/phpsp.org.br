@@ -32,7 +32,7 @@ class ItemBuilderTest extends TestCase
             ->pubDate(date(DATE_RSS, $post->pubDate))
             ->toDOMElement($dom);
         $dom->appendChild($item);
-        
+
         $reader = new SimpleXMLElement($dom->saveXML());
 
         $this->assertEquals('Um post bacana!', $reader->title);

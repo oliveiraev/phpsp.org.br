@@ -15,28 +15,28 @@ class ChannelBuilder
     public function title(string $title) : ChannelBuilder
     {
         $this->title = $title;
-        
+
         return $this;
     }
 
     public function link(string $link) : ChannelBuilder
     {
         $this->link = $link;
-        
+
         return $this;
     }
 
     public function description(string $description) : ChannelBuilder
     {
         $this->description = $description;
-        
+
         return $this;
     }
 
     public function language(string $language) : ChannelBuilder
     {
         $this->language = $language;
-        
+
         return $this;
     }
 
