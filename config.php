@@ -3,6 +3,7 @@
 use TightenCo\Jigsaw\PageVariable;
 
 return [
+    'language' => 'pt-BR',
     'baseUrl' => 'http://localhost:3000/',
     'meetup' => [
         'baseUrl' => 'https://yp3o7jx9t2.execute-api.sa-east-1.amazonaws.com/dev/',
@@ -64,6 +65,11 @@ return [
             'img' => '/assets/images/thirdparty/GitHub-Mark-120px-plus.png',
             'url' => 'https://github.com/phpsp',
         ],
+        'rss' => [
+            'title' => 'RSS',
+            'img' => '/assets/images/thirdparty/rss.png',
+            'url' => 'https://phpsp.org.br/feed.xml',
+        ],
         'twitter' => [
             'title' => 'Twitter',
             'img' => '/assets/images/thirdparty/Twitter_Social_Icon_Circle_Color.png',
@@ -72,7 +78,7 @@ return [
         'slack' => [
             'title' => 'Slack',
             'img' => '/assets/images/thirdparty/SlackAppIcon.png',
-            'url' => 'https://join.slack.com/t/phpsp/shared_invite/enQtMzI2NjQxNTM4Mzg3LTA4ODU1NWI3ZDYzZWJjZmMzYjczZTc1YTc1ZWUwZjViMTExYzE3MGY3NDljZDYyMTdmNjMxMmM2MTE4ZWJhNmE',
+            'url' => 'https://bit.ly/vem-pro-slack-phpsp',
         ],
         'linkedin' => [
             'title' => 'LinkedIn',
@@ -82,7 +88,7 @@ return [
         'facebook' => [
             'title' => 'Facebook',
             'img' => '/assets/images/thirdparty/flogo_RGB_HEX-144.png',
-            'url' => 'https://facebook.com/sao.paulo.elephants',
+            'url' => 'https://facebook.com/phpsp',
         ],
         'telegram' => [
             'title' => 'Telegram',
@@ -92,10 +98,10 @@ return [
     ],
     'links_header' => [
         'mobile' => [
-            'twitter', 'slack', 'telegram',
+            'rss', 'twitter', 'slack', 'telegram',
         ],
         'desktop' => [
-            'github', 'twitter', 'slack', 'linkedin', 'facebook', 'telegram',
+            'rss', 'github', 'twitter', 'slack', 'linkedin', 'facebook', 'telegram',
         ],
     ],
     'branches' => [

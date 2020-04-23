@@ -17,7 +17,7 @@ pagination:
         <div class="columns">
             <div class="column content">
                 <h2 class="title is-2">
-                    <a class="has-text-grey" href="{{ $page->getUrl() }}eventos">Próximos Eventos</a>
+                    <span class="has-text-grey">Próximos Eventos</span>
                 </h2>
                 <p>
                     A comunidade se reune frequentemente. Veja qual encontro vai acontecer ao seu redor!
@@ -32,7 +32,7 @@ pagination:
             </div>
             <div class="column">
                 <h2 class="title is-2">
-                    <a class="has-text-grey" href="{{ $page->getUrl() }}avisos">Avisos</a>
+                    <span class="has-text-grey">Avisos</span>
                 </h2>
                 @include('_partials.content.notices.list')
             </div>
